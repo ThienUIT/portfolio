@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'assets/sass/variables';
+@import 'assets/sass/vertical-rhythm';
+@import 'assets/sass/normalize-mixin';
+@import 'assets/sass/mixins';
+
+@include normalize();
+
+html[data-theme="light"] {
+  @include spread-map($theme-map-light);
+}
+
+html[data-theme="dark"] {
+  @include spread-map($theme-map-dark);
+}
+
+
+html {
+  background: var(--theme-background);
+  color: var(--theme-on-color);
+}
